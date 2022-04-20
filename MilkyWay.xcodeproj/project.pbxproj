@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		C977175E28107E6C004516BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977175D28107E6C004516BE /* AppDelegate.swift */; };
 		C977176028107E6C004516BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977175F28107E6C004516BE /* SceneDelegate.swift */; };
-		C977176228107E6C004516BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977176128107E6C004516BE /* ViewController.swift */; };
 		C977176528107E6C004516BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C977176328107E6C004516BE /* Main.storyboard */; };
 		C977176728107E6D004516BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C977176628107E6D004516BE /* Assets.xcassets */; };
 		C977176A28107E6D004516BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C977176828107E6D004516BE /* LaunchScreen.storyboard */; };
 		C977177528107E6D004516BE /* MilkyWayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977177428107E6D004516BE /* MilkyWayTests.swift */; };
 		C977177F28107E6D004516BE /* MilkyWayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977177E28107E6D004516BE /* MilkyWayUITests.swift */; };
 		C977178128107E6D004516BE /* MilkyWayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977178028107E6D004516BE /* MilkyWayUITestsLaunchTests.swift */; };
+		C9771792281084DA004516BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9771791281084DA004516BE /* NetworkManager.swift */; };
+		C97717942810873A004516BE /* NasaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97717932810873A004516BE /* NasaModel.swift */; };
+		C977179A28108B7F004516BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977179928108B7F004516BE /* HomeViewController.swift */; };
+		C977179C28108BDD004516BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977179B28108BDD004516BE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		C977175A28107E6C004516BE /* MilkyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C977175D28107E6C004516BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C977175F28107E6C004516BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C977176128107E6C004516BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C977176428107E6C004516BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C977176628107E6D004516BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C977176928107E6D004516BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		C977177A28107E6D004516BE /* MilkyWayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilkyWayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C977177E28107E6D004516BE /* MilkyWayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWayUITests.swift; sourceTree = "<group>"; };
 		C977178028107E6D004516BE /* MilkyWayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9771791281084DA004516BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C97717932810873A004516BE /* NasaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaModel.swift; sourceTree = "<group>"; };
+		C977179928108B7F004516BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C977179B28108BDD004516BE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,13 @@
 		C977175C28107E6C004516BE /* MilkyWay */ = {
 			isa = PBXGroup;
 			children = (
+				C97717902810841E004516BE /* Services */,
+				C977178F28108406004516BE /* View */,
+				C977178E281081B0004516BE /* Controller */,
+				C977178D28108199004516BE /* Model */,
 				C977175D28107E6C004516BE /* AppDelegate.swift */,
 				C977175F28107E6C004516BE /* SceneDelegate.swift */,
-				C977176128107E6C004516BE /* ViewController.swift */,
-				C977176328107E6C004516BE /* Main.storyboard */,
 				C977176628107E6D004516BE /* Assets.xcassets */,
-				C977176828107E6D004516BE /* LaunchScreen.storyboard */,
 				C977176B28107E6D004516BE /* Info.plist */,
 			);
 			path = MilkyWay;
@@ -125,6 +132,40 @@
 				C977178028107E6D004516BE /* MilkyWayUITestsLaunchTests.swift */,
 			);
 			path = MilkyWayUITests;
+			sourceTree = "<group>";
+		};
+		C977178D28108199004516BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C97717932810873A004516BE /* NasaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C977178E281081B0004516BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C977179928108B7F004516BE /* HomeViewController.swift */,
+				C977179B28108BDD004516BE /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C977178F28108406004516BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C977176328107E6C004516BE /* Main.storyboard */,
+				C977176828107E6D004516BE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C97717902810841E004516BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C9771791281084DA004516BE /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C977176228107E6C004516BE /* ViewController.swift in Sources */,
+				C977179A28108B7F004516BE /* HomeViewController.swift in Sources */,
+				C97717942810873A004516BE /* NasaModel.swift in Sources */,
+				C9771792281084DA004516BE /* NetworkManager.swift in Sources */,
+				C977179C28108BDD004516BE /* DetailViewController.swift in Sources */,
 				C977175E28107E6C004516BE /* AppDelegate.swift in Sources */,
 				C977176028107E6C004516BE /* SceneDelegate.swift in Sources */,
 			);
@@ -442,8 +486,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,8 +515,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +528,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
