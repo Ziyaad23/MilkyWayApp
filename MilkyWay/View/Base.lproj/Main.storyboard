@@ -37,47 +37,47 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="213" id="4D0-Bz-2a5" customClass="TableViewCell" customModule="MilkyWay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="213"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="125" id="4D0-Bz-2a5" customClass="TableViewCell" customModule="MilkyWay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4D0-Bz-2a5" id="6sB-Lc-BYE" customClass="l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-zj-YoT">
-                                                    <rect key="frame" x="20" y="26" width="156" height="162"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expedition 22 Prelaunch Press Conference" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Jx-uwc">
+                                                    <rect key="frame" x="114" y="26" width="280" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="162" id="kf7-oh-5tt"/>
-                                                        <constraint firstAttribute="width" constant="156" id="wgS-t0-SbC"/>
+                                                        <constraint firstAttribute="height" constant="41" id="Ouh-Qu-R2g"/>
                                                     </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA/Bill Ingalls | 20 Mar, 2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t60-bo-7d9">
-                                                    <rect key="frame" x="192" y="76" width="204" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expedition 22 Prelaunch Press Conference" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Jx-uwc">
-                                                    <rect key="frame" x="192" y="22" width="204" height="46"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-zj-YoT">
+                                                    <rect key="frame" x="20" y="26" width="86" height="85"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="46" id="Ouh-Qu-R2g"/>
+                                                        <constraint firstAttribute="height" constant="85" id="kf7-oh-5tt"/>
+                                                        <constraint firstAttribute="width" constant="86" id="wgS-t0-SbC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA/Bill Ingalls | 20 Mar, 2002" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t60-bo-7d9">
+                                                    <rect key="frame" x="114" y="67" width="280" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cuY-zj-YoT" firstAttribute="leading" secondItem="6sB-Lc-BYE" secondAttribute="leading" constant="20" symbolic="YES" id="27P-vw-ld4"/>
-                                                <constraint firstItem="t60-bo-7d9" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="16" id="7BA-JR-ha2"/>
-                                                <constraint firstAttribute="bottom" secondItem="t60-bo-7d9" secondAttribute="bottom" constant="89" id="9NX-zk-PQD"/>
-                                                <constraint firstAttribute="trailing" secondItem="t60-bo-7d9" secondAttribute="trailing" constant="18" id="HUs-UO-Yoy"/>
-                                                <constraint firstItem="t60-bo-7d9" firstAttribute="top" secondItem="BLw-Jx-uwc" secondAttribute="bottom" constant="8" symbolic="YES" id="KaU-K8-hI4"/>
-                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="16" id="Ooo-rN-BNo"/>
-                                                <constraint firstAttribute="trailing" secondItem="BLw-Jx-uwc" secondAttribute="trailing" constant="18" id="QEM-At-rdr"/>
-                                                <constraint firstAttribute="bottom" secondItem="cuY-zj-YoT" secondAttribute="bottom" constant="25" id="Z5b-IH-OBr"/>
+                                                <constraint firstItem="t60-bo-7d9" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="8" id="7BA-JR-ha2"/>
+                                                <constraint firstAttribute="bottom" secondItem="t60-bo-7d9" secondAttribute="bottom" constant="30" id="9NX-zk-PQD"/>
+                                                <constraint firstAttribute="trailing" secondItem="t60-bo-7d9" secondAttribute="trailing" constant="20" id="HUs-UO-Yoy"/>
+                                                <constraint firstItem="t60-bo-7d9" firstAttribute="top" secondItem="BLw-Jx-uwc" secondAttribute="bottom" id="KaU-K8-hI4"/>
+                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="8" id="Ooo-rN-BNo"/>
+                                                <constraint firstAttribute="trailing" secondItem="BLw-Jx-uwc" secondAttribute="trailing" constant="20" id="QEM-At-rdr"/>
+                                                <constraint firstAttribute="bottom" secondItem="cuY-zj-YoT" secondAttribute="bottom" constant="14" id="Z5b-IH-OBr"/>
                                                 <constraint firstItem="cuY-zj-YoT" firstAttribute="top" secondItem="6sB-Lc-BYE" secondAttribute="top" constant="26" id="f54-L8-S4S"/>
-                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="top" secondItem="6sB-Lc-BYE" secondAttribute="top" constant="22" id="iCU-3V-Nkq"/>
+                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="top" secondItem="6sB-Lc-BYE" secondAttribute="top" constant="26" id="iCU-3V-Nkq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

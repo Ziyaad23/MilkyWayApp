@@ -68,5 +68,5 @@ struct Metadata: Codable {
 }
 
 struct NasaInfo : Codable {
-    let nasaId, nasaImage, nasaTitle, nasaDescription, nasaCenter, nasaDate: String
+    let nasaId, nasaImage, nasaTitle, nasaDescription, nasaCenter, nasaDate, nasaPhotographer: String
 }

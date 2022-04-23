@@ -55,21 +55,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let nasaDescription = item.data[0].description ?? ""
                     let nasaCenter = item.data[0].center ?? ""
                     let nasaDateCreated = item.data[0].date_created ?? ""
-                    print(nasaDateCreated)
+                    let nasaPhotographer = item.data[0].photographer ?? ""
 
                     //Date Formatter to required format
                     let dateFormatterGet = DateFormatter()
                     dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                     let dateFormatterPrint = DateFormatter()
-                    dateFormatterPrint.dateFormat = "yyyy-MM-dd"
+                    dateFormatterPrint.dateFormat = "yyyy-MMM-dd"
                     let _date = dateFormatterGet.date(from: nasaDateCreated)
                     let dateCreated =  dateFormatterPrint.string(from: _date ?? Date())
 
-                    let resultsToAppend = NasaInfo(nasaId: nasaId, nasaImage: nasaImage, nasaTitle: nasaTitle, nasaDescription: nasaDescription, nasaCenter: nasaCenter, nasaDate: dateCreated)
+                    let resultsToAppend = NasaInfo(nasaId: nasaId, nasaImage: nasaImage, nasaTitle: nasaTitle, nasaDescription: nasaDescription, nasaCenter: nasaCenter, nasaDate: dateCreated, nasaPhotographer: nasaPhotographer)
                     
                     self.nasaInfos.append(resultsToAppend)
                 }
-                print(self.nasaInfos)
                 self.tableView.reloadData()
             }
         }
@@ -82,6 +81,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"Cell") as! TableViewCell
         cell.lblTitle?.text = nasaInfos[indexPath.row].nasaTitle
+        cell.lblPhotographDate?.text = "\(nasaInfos[indexPath.row].nasaPhotographer) | \(nasaInfos[indexPath.row].nasaDate)"
+        cell.imgCenter?.loadFrom(URLAddress: nasaInfos[indexPath.row].nasaImage)
         
         return cell
     }
@@ -105,4 +106,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 protocol APIManagerService {
     func fetchItems<T: Decodable>(url: URL, completion: @escaping (Result<T, Error>) -> Void)
+}
+
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                        self?.image = loadedImage
+                }
+            }
+        }
+    }
 }
