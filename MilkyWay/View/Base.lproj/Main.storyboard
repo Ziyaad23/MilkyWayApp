@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="REc-YR-t85">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,23 +9,111 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="oaJ-3e-fka">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="REc-YR-t85" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf4-zE-CMn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1nQ-0s-WLa" kind="relationship" relationship="rootViewController" id="qqh-CZ-ubM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uC4-Cp-dKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Poh-9g-zAT">
+            <objects>
+                <viewController id="1nQ-0s-WLa" customClass="ViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHB-Zy-H8S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t6l-UG-1Z6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="213" id="4D0-Bz-2a5" customClass="TableViewCell" customModule="MilkyWay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="213"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4D0-Bz-2a5" id="6sB-Lc-BYE" customClass="l">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cuY-zj-YoT">
+                                                    <rect key="frame" x="20" y="26" width="156" height="162"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="162" id="kf7-oh-5tt"/>
+                                                        <constraint firstAttribute="width" constant="156" id="wgS-t0-SbC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA/Bill Ingalls | 20 Mar, 2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t60-bo-7d9">
+                                                    <rect key="frame" x="192" y="76" width="204" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expedition 22 Prelaunch Press Conference" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Jx-uwc">
+                                                    <rect key="frame" x="192" y="22" width="204" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="Ouh-Qu-R2g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cuY-zj-YoT" firstAttribute="leading" secondItem="6sB-Lc-BYE" secondAttribute="leading" constant="20" symbolic="YES" id="27P-vw-ld4"/>
+                                                <constraint firstItem="t60-bo-7d9" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="16" id="7BA-JR-ha2"/>
+                                                <constraint firstAttribute="bottom" secondItem="t60-bo-7d9" secondAttribute="bottom" constant="89" id="9NX-zk-PQD"/>
+                                                <constraint firstAttribute="trailing" secondItem="t60-bo-7d9" secondAttribute="trailing" constant="18" id="HUs-UO-Yoy"/>
+                                                <constraint firstItem="t60-bo-7d9" firstAttribute="top" secondItem="BLw-Jx-uwc" secondAttribute="bottom" constant="8" symbolic="YES" id="KaU-K8-hI4"/>
+                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="leading" secondItem="cuY-zj-YoT" secondAttribute="trailing" constant="16" id="Ooo-rN-BNo"/>
+                                                <constraint firstAttribute="trailing" secondItem="BLw-Jx-uwc" secondAttribute="trailing" constant="18" id="QEM-At-rdr"/>
+                                                <constraint firstAttribute="bottom" secondItem="cuY-zj-YoT" secondAttribute="bottom" constant="25" id="Z5b-IH-OBr"/>
+                                                <constraint firstItem="cuY-zj-YoT" firstAttribute="top" secondItem="6sB-Lc-BYE" secondAttribute="top" constant="26" id="f54-L8-S4S"/>
+                                                <constraint firstItem="BLw-Jx-uwc" firstAttribute="top" secondItem="6sB-Lc-BYE" secondAttribute="top" constant="22" id="iCU-3V-Nkq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgCenter" destination="cuY-zj-YoT" id="ANu-mI-h9Z"/>
+                                            <outlet property="lblPhotographDate" destination="t60-bo-7d9" id="wfj-cd-z4G"/>
+                                            <outlet property="lblTitle" destination="BLw-Jx-uwc" id="YxD-Wj-urT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1nQ-0s-WLa" id="Vqk-Sh-VsU"/>
+                                    <outlet property="delegate" destination="1nQ-0s-WLa" id="rEB-A3-VNK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a68-6P-b6S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t6l-UG-1Z6" firstAttribute="bottom" secondItem="a68-6P-b6S" secondAttribute="bottom" id="Beu-Ck-Fp0"/>
+                            <constraint firstAttribute="trailing" secondItem="t6l-UG-1Z6" secondAttribute="trailing" id="JB8-0B-OyE"/>
+                            <constraint firstItem="t6l-UG-1Z6" firstAttribute="top" secondItem="a68-6P-b6S" secondAttribute="top" id="aSZ-gy-oyi"/>
+                            <constraint firstItem="t6l-UG-1Z6" firstAttribute="leading" secondItem="lHB-Zy-H8S" secondAttribute="leading" id="bVv-w3-bmz"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UpF-Dw-mpr"/>
+                    <connections>
+                        <outlet property="tableView" destination="t6l-UG-1Z6" id="57t-Vk-3dA"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugl-im-qDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="105"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="122.54464285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="placeholder" width="1280" height="960"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
