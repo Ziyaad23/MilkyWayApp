@@ -8,21 +8,21 @@
 import Foundation
 import Combine
 
-class UsersViewModel {
+class NasaViewModel {
 
     // Dependency Injection
-    private let apiManager: APIManagerService
+    private let NetworkManager: NetworkManagerService
     
     var nasaInfos: [NasaInfo] = []
     var nasaSubject = PassthroughSubject<RootClass, Error>()
     
-    init(apiManager: APIManagerService) {
-        self.apiManager = apiManager
+    init(NetworkManager: NetworkManagerService) {
+        self.NetworkManager = NetworkManager
     }
     
     func fetchResults() {
         let url = URL(string: "https://images-api.nasa.gov/search?q=''")!
-        apiManager.fetchItems(url: url) { [weak self] (result: Result<RootClass, Error>) in
+        NetworkManager.fetchItems(url: url) { [weak self] (result: Result<RootClass, Error>) in
             //(result)
             switch result {
             case .success(let results):

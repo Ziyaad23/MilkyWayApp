@@ -105,15 +105,32 @@
                     <navigationItem key="navigationItem" id="UpF-Dw-mpr"/>
                     <connections>
                         <outlet property="tableView" destination="t6l-UG-1Z6" id="57t-Vk-3dA"/>
+                        <segue destination="mh0-WL-ihW" kind="show" identifier="detailSegue" id="y8M-0z-mnW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugl-im-qDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1124.6376811594205" y="122.54464285714285"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="MuY-Mj-egq">
+            <objects>
+                <viewController id="mh0-WL-ihW" customClass="DetailViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ck-Yn-x6v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NSd-g4-6Zn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZvB-Py-5y6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xf0-Km-QCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="123"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="placeholder" width="1280" height="960"/>
+        <image name="placeholder" width="2560" height="1440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

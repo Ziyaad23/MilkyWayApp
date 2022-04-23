@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class APIManager: APIManagerService {
+class NetworkManager: NetworkManagerService {
 
     private var subscribers = Set<AnyCancellable>()
     

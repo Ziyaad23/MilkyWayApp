@@ -8,11 +8,14 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var nasaDetail:[NasaInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.topItem?.backButtonTitle = "The Milky Way"
     }
     
 

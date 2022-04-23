@@ -26,7 +26,7 @@ struct Datum: Codable {
     let center: String?
     let title: String?
     let photographer: String?
-    let nasaID: String?
+    let nasa_id: String?
     let date_created: String?
     let keywords: [String]?
     let mediaType: String?

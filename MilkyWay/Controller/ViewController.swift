@@ -13,10 +13,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: UsersViewModel!
+    var viewModel: NasaViewModel!
     var nasaInfos: [NasaInfo] = []
+    var index = Int()
     
-    private let apiManager = APIManager()
+    private let networkManager = NetworkManager()
     private var subscriber: AnyCancellable?
     
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func setupViewModel() {
-        viewModel = UsersViewModel(apiManager: apiManager)
+        viewModel = NasaViewModel(NetworkManager: networkManager)
     }
     
     private func fetchResults() {
@@ -49,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }) { (users) in
             DispatchQueue.main.async {
                 for item in users.collection.items{
-                    let nasaId = item.data[0].nasaID ?? ""
+                    let nasaId = item.data[0].nasa_id ?? ""
                     let nasaTitle = item.data[0].title ?? ""
                     let nasaImage = item.links[0].href ?? ""
                     let nasaDescription = item.data[0].description ?? ""
@@ -88,23 +89,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        index = indexPath.row
+        performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+            // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+            if segue.identifier == "detailSegue" {
+                if let nextViewController = segue.destination as? DetailViewController {
+                    let infoToAppend = nasaInfos[index]
+                    nextViewController.nasaDetail.append(infoToAppend)
+                }
+            }
+        }
 }
 
-protocol APIManagerService {
+protocol NetworkManagerService {
     func fetchItems<T: Decodable>(url: URL, completion: @escaping (Result<T, Error>) -> Void)
 }
 
