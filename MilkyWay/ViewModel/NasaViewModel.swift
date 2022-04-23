@@ -21,7 +21,7 @@ class NasaViewModel {
     }
     
     func fetchResults() {
-        let url = URL(string: "https://images-api.nasa.gov/search?q=''")!
+        let url = URL(string: "https://images-api.nasa.gov/search?q=%22%22")!
         NetworkManager.fetchItems(url: url) { [weak self] (result: Result<RootClass, Error>) in
             //(result)
             switch result {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="REc-YR-t85">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -14,8 +14,9 @@
             <objects>
                 <navigationController id="REc-YR-t85" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf4-zE-CMn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <connections>
                         <segue destination="1nQ-0s-WLa" kind="relationship" relationship="rootViewController" id="qqh-CZ-ubM"/>
@@ -30,22 +31,22 @@
             <objects>
                 <viewController id="1nQ-0s-WLa" customClass="ViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lHB-Zy-H8S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t6l-UG-1Z6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="125" id="4D0-Bz-2a5" customClass="TableViewCell" customModule="MilkyWay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="125"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4D0-Bz-2a5" id="6sB-Lc-BYE" customClass="l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expedition 22 Prelaunch Press Conference" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Jx-uwc">
-                                                    <rect key="frame" x="114" y="26" width="280" height="41"/>
+                                                    <rect key="frame" x="114" y="26" width="241" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="Ouh-Qu-R2g"/>
                                                     </constraints>
@@ -61,7 +62,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA/Bill Ingalls | 20 Mar, 2002" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t60-bo-7d9">
-                                                    <rect key="frame" x="114" y="67" width="280" height="28"/>
+                                                    <rect key="frame" x="114" y="67" width="241" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -117,22 +118,83 @@
             <objects>
                 <viewController id="mh0-WL-ihW" customClass="DetailViewController" customModule="MilkyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ck-Yn-x6v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expedition 22 Prelaunch Press Conference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-7A-zem">
+                                <rect key="frame" x="20" y="362" width="374" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="hO5-qp-3AH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NASA/Bill Ingalls | 20 Mar, 2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdA-FV-GMq">
+                                <rect key="frame" x="20" y="421" width="374" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="nOO-99-16i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifc-mI-X2Y">
+                                <rect key="frame" x="72" y="480" width="269" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="299" id="fS3-sB-S1B"/>
+                                </constraints>
+                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ZPc-Oz-rwl">
+                                <rect key="frame" x="18" y="44" width="339" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="zPs-C5-eMF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NSd-g4-6Zn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="top" secondItem="ZPc-Oz-rwl" secondAttribute="bottom" constant="75" id="F0d-0E-St8"/>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="leading" secondItem="fdA-FV-GMq" secondAttribute="leading" id="HK7-6c-BEU"/>
+                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="top" secondItem="fdA-FV-GMq" secondAttribute="bottom" constant="26" id="KyL-EP-Nuv"/>
+                            <constraint firstItem="fdA-FV-GMq" firstAttribute="top" secondItem="AbN-7A-zem" secondAttribute="bottom" constant="8" id="Lqq-KZ-na3"/>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="trailing" secondItem="fdA-FV-GMq" secondAttribute="trailing" id="PSf-p0-Dcl"/>
+                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="top" secondItem="NSd-g4-6Zn" secondAttribute="top" id="gi7-Zm-IMk"/>
+                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="18" id="kDu-OX-xxc"/>
+                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="72" id="sq9-ww-CN2"/>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="20" id="va6-px-T7a"/>
+                            <constraint firstItem="fdA-FV-GMq" firstAttribute="centerX" secondItem="Ifc-mI-X2Y" secondAttribute="centerX" id="xDj-zb-0gS"/>
+                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="centerX" secondItem="1ck-Yn-x6v" secondAttribute="centerX" id="yt3-Ul-3bO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZvB-Py-5y6"/>
+                    <connections>
+                        <outlet property="imgCenter" destination="ZPc-Oz-rwl" id="Tc1-hA-wZK"/>
+                        <outlet property="lblDescription" destination="Ifc-mI-X2Y" id="DnD-Ge-pIf"/>
+                        <outlet property="lblPhotographDate" destination="fdA-FV-GMq" id="b4J-89-3wb"/>
+                        <outlet property="lblTitle" destination="AbN-7A-zem" id="P57-m6-UCG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xf0-Km-QCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="123"/>
+            <point key="canvasLocation" x="2306.4000000000001" y="121.88905547226388"/>
         </scene>
     </scenes>
     <resources>
         <image name="placeholder" width="2560" height="1440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
