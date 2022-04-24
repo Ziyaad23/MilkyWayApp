@@ -121,55 +121,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expedition 22 Prelaunch Press Conference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-7A-zem">
-                                <rect key="frame" x="20" y="362" width="374" height="51"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ZPc-Oz-rwl">
+                                <rect key="frame" x="0.0" y="44" width="375" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="hO5-qp-3AH"/>
+                                    <constraint firstAttribute="height" constant="240" id="WG8-3L-bUT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expedition 22 Prelaunch Press Conference" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-7A-zem">
+                                <rect key="frame" x="16" y="292" width="343" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="aeT-WQ-mxi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NASA/Bill Ingalls | 20 Mar, 2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdA-FV-GMq">
-                                <rect key="frame" x="20" y="421" width="374" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASA/Bill Ingalls | 20 Mar, 2002" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdA-FV-GMq">
+                                <rect key="frame" x="16" y="327" width="343" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="nOO-99-16i"/>
+                                    <constraint firstAttribute="height" constant="24" id="ykl-qs-Og8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifc-mI-X2Y">
-                                <rect key="frame" x="72" y="480" width="269" height="299"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifc-mI-X2Y">
+                                <rect key="frame" x="16" y="359" width="343" height="251"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="299" id="fS3-sB-S1B"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="258" id="hbw-ag-CtT"/>
                                 </constraints>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </string>
+                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ZPc-Oz-rwl">
-                                <rect key="frame" x="18" y="44" width="339" height="243"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="243" id="zPs-C5-eMF"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NSd-g4-6Zn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AbN-7A-zem" firstAttribute="top" secondItem="ZPc-Oz-rwl" secondAttribute="bottom" constant="75" id="F0d-0E-St8"/>
-                            <constraint firstItem="AbN-7A-zem" firstAttribute="leading" secondItem="fdA-FV-GMq" secondAttribute="leading" id="HK7-6c-BEU"/>
-                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="top" secondItem="fdA-FV-GMq" secondAttribute="bottom" constant="26" id="KyL-EP-Nuv"/>
-                            <constraint firstItem="fdA-FV-GMq" firstAttribute="top" secondItem="AbN-7A-zem" secondAttribute="bottom" constant="8" id="Lqq-KZ-na3"/>
-                            <constraint firstItem="AbN-7A-zem" firstAttribute="trailing" secondItem="fdA-FV-GMq" secondAttribute="trailing" id="PSf-p0-Dcl"/>
-                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="top" secondItem="NSd-g4-6Zn" secondAttribute="top" id="gi7-Zm-IMk"/>
-                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="18" id="kDu-OX-xxc"/>
-                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="72" id="sq9-ww-CN2"/>
-                            <constraint firstItem="AbN-7A-zem" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="20" id="va6-px-T7a"/>
-                            <constraint firstItem="fdA-FV-GMq" firstAttribute="centerX" secondItem="Ifc-mI-X2Y" secondAttribute="centerX" id="xDj-zb-0gS"/>
-                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="centerX" secondItem="1ck-Yn-x6v" secondAttribute="centerX" id="yt3-Ul-3bO"/>
+                            <constraint firstItem="NSd-g4-6Zn" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ifc-mI-X2Y" secondAttribute="bottom" constant="50" id="9kh-Ni-eig"/>
+                            <constraint firstItem="NSd-g4-6Zn" firstAttribute="trailing" secondItem="fdA-FV-GMq" secondAttribute="trailing" constant="16" id="EaF-WF-4gs"/>
+                            <constraint firstItem="fdA-FV-GMq" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="16" id="RGP-oQ-Pdb"/>
+                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="top" secondItem="fdA-FV-GMq" secondAttribute="bottom" constant="8" symbolic="YES" id="S1b-N3-Onk"/>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="top" secondItem="ZPc-Oz-rwl" secondAttribute="bottom" constant="8" symbolic="YES" id="Wqw-pP-Vhw"/>
+                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="top" secondItem="NSd-g4-6Zn" secondAttribute="top" id="XYY-pb-fD5"/>
+                            <constraint firstItem="AbN-7A-zem" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="16" id="c1U-v1-JcI"/>
+                            <constraint firstItem="Ifc-mI-X2Y" firstAttribute="leading" secondItem="NSd-g4-6Zn" secondAttribute="leading" constant="16" id="dsf-ea-p8b"/>
+                            <constraint firstItem="ZPc-Oz-rwl" firstAttribute="leading" secondItem="1ck-Yn-x6v" secondAttribute="leading" id="eFn-tk-lTp"/>
+                            <constraint firstItem="fdA-FV-GMq" firstAttribute="top" secondItem="AbN-7A-zem" secondAttribute="bottom" constant="8" symbolic="YES" id="hOm-0h-vN7"/>
+                            <constraint firstItem="NSd-g4-6Zn" firstAttribute="trailing" secondItem="AbN-7A-zem" secondAttribute="trailing" constant="16" id="mQc-kI-vlc"/>
+                            <constraint firstAttribute="trailing" secondItem="ZPc-Oz-rwl" secondAttribute="trailing" id="nzV-Ie-8zG"/>
+                            <constraint firstItem="NSd-g4-6Zn" firstAttribute="trailing" secondItem="Ifc-mI-X2Y" secondAttribute="trailing" constant="16" id="vBY-XC-kxi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZvB-Py-5y6"/>
