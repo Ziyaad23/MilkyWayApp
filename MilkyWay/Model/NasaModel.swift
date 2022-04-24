@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Root
 struct RootClass: Codable {
     let collection: Collection
 }

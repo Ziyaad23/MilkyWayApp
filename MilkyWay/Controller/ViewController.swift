@@ -45,7 +45,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         subscriber = viewModel.nasaSubject.sink(receiveCompletion: { (resultCompletion) in
             switch resultCompletion {
             case .failure(let error):
-                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    Alert.present(
+                        title: "That didn't work",
+                        message: error.localizedDescription,
+                        actions: .retry(handler: {
+                            self.fetchResults()
+                            self.observeViewModel()
+                        }),
+                        from: self
+                    )
+                }
             default: break
             }
         }) { (results) in

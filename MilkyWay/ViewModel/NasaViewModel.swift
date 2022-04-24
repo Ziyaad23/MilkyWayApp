@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import Combine
 
 class NasaViewModel {
@@ -30,7 +31,7 @@ class NasaViewModel {
                 self?.nasaSubject.send(results)
             //Failure
             case .failure(let error):
-                self?.nasaSubject.send(completion: .failure(error))
+                self?.nasaSubject.send(completion: .failure(error))                
             }
         }
     }
