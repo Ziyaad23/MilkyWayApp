@@ -19,9 +19,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //Update navigation bar
         navigationController?.navigationBar.topItem?.backButtonTitle = "The Milky Way"
         navigationController?.navigationBar.prefersLargeTitles = false
         
+        //Load detail informations in view
         imgCenter.loadFrom(URLAddress: nasaDetail[0].nasaImage)
         lblTitle.text = nasaDetail[0].nasaTitle
         lblPhotographDate.text = "\(nasaDetail[0].nasaPhotographer) | \(nasaDetail[0].nasaDate)"

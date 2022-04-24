@@ -12,25 +12,26 @@ class NasaViewModel {
 
     // Dependency Injection
     private let NetworkManager: NetworkManagerService
-    
-    var nasaInfos: [NasaInfo] = []
     var nasaSubject = PassthroughSubject<RootClass, Error>()
     
     init(NetworkManager: NetworkManagerService) {
         self.NetworkManager = NetworkManager
     }
     
+    //Fetch results from API
     func fetchResults() {
         let url = URL(string: "https://images-api.nasa.gov/search?q=%22%22")!
         NetworkManager.fetchItems(url: url) { [weak self] (result: Result<RootClass, Error>) in
-            //(result)
+            //Results from API
             switch result {
+            //Success
             case .success(let results):
+                //Store results in nasaSubjects
                 self?.nasaSubject.send(results)
+            //Failure
             case .failure(let error):
                 self?.nasaSubject.send(completion: .failure(error))
             }
         }
     }
-    
 }

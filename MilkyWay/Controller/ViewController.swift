@@ -10,7 +10,6 @@ import Combine
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: NasaViewModel!
@@ -24,6 +23,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Update navigation bar
         navigationController?.navigationBar.topItem?.title = "The Milky Way"
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -47,9 +48,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(error.localizedDescription)
             default: break
             }
-        }) { (users) in
+        }) { (results) in
             DispatchQueue.main.async {
-                for item in users.collection.items{
+                for item in results.collection.items{
                     let nasaId = item.data[0].nasa_id ?? ""
                     let nasaTitle = item.data[0].title ?? ""
                     let nasaImage = item.links[0].href ?? ""
@@ -65,7 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     dateFormatterPrint.dateFormat = "yyyy-MMM-dd"
                     let _date = dateFormatterGet.date(from: nasaDateCreated)
                     let dateCreated =  dateFormatterPrint.string(from: _date ?? Date())
-
+                    
+                    //Save information needed from results 
                     let resultsToAppend = NasaInfo(nasaId: nasaId, nasaImage: nasaImage, nasaTitle: nasaTitle, nasaDescription: nasaDescription, nasaCenter: nasaCenter, nasaDate: dateCreated, nasaPhotographer: nasaPhotographer)
                     
                     self.nasaInfos.append(resultsToAppend)
@@ -76,11 +78,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Return number of rows in tableView
         return nasaInfos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"Cell") as! TableViewCell
+        //Load data in table view cell in tableView
         cell.lblTitle?.text = nasaInfos[indexPath.row].nasaTitle
         cell.lblPhotographDate?.text = "\(nasaInfos[indexPath.row].nasaPhotographer) | \(nasaInfos[indexPath.row].nasaDate)"
         cell.imgCenter?.loadFrom(URLAddress: nasaInfos[indexPath.row].nasaImage)
@@ -89,37 +93,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Save index of row
         index = indexPath.row
+        //Segue to detail view
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-            if segue.identifier == "detailSegue" {
-                if let nextViewController = segue.destination as? DetailViewController {
-                    let infoToAppend = nasaInfos[index]
-                    nextViewController.nasaDetail.append(infoToAppend)
-                }
-            }
-        }
-}
-
-protocol NetworkManagerService {
-    func fetchItems<T: Decodable>(url: URL, completion: @escaping (Result<T, Error>) -> Void)
-}
-
-extension UIImageView {
-    func loadFrom(URLAddress: String) {
-        guard let url = URL(string: URLAddress) else {
-            return
-        }
-        
-        DispatchQueue.main.async { [weak self] in
-            if let imageData = try? Data(contentsOf: url) {
-                if let loadedImage = UIImage(data: imageData) {
-                        self?.image = loadedImage
-                }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "detailSegue" {
+            if let nextViewController = segue.destination as? DetailViewController {
+                let infoToAppend = nasaInfos[index]
+                nextViewController.nasaDetail.append(infoToAppend)
             }
         }
     }

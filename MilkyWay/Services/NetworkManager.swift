@@ -18,8 +18,10 @@ class NetworkManager: NetworkManagerService {
             .decode(type: T.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { (resultCompletion) in
                 switch resultCompletion {
+                //Failure
                 case .failure(let error):
                     completion(.failure(error))
+                //Success
                 case .finished:
                     break
                 }
@@ -28,3 +30,8 @@ class NetworkManager: NetworkManagerService {
             }).store(in: &subscribers)
     }
 }
+
+protocol NetworkManagerService {
+    func fetchItems<T: Decodable>(url: URL, completion: @escaping (Result<T, Error>) -> Void)
+}
+
